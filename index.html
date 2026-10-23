@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>អាណាចក្រកីឡា - Anachak Keyla Sport Gallery</title>
+    <title>អាណាចក្រកីឡា - Anachak Keyla Sport Store</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Kantumruy Pro & Battambang -->
@@ -28,17 +28,16 @@
     <div class="bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-500 text-slate-950 text-xs md:text-sm font-bold py-2 px-4 text-center shadow-sm">
         <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
             <i class="ph-fill ph-seal-check text-lg"></i>
-            <span>ឈុតកីឡាសាច់ក្រណាត់គុណភាពខ្ពស់ តម្លៃពិសេសត្រឹមតែ <strong>7.5 $ ($7.50)</strong> គ្រប់ម៉ូដ! កម្ម៉ង់តាម Telegram: <strong>@anachakkeylasport</strong></span>
+            <span>ឈុតកីឡា ស្បែកជើង ស្រោមជើង និងសម្ភារៈកីឡាគុណភាពខ្ពស់! កម្ម៉ង់តាម Telegram: <strong>@anachakkeylasport</strong></span>
         </div>
     </div>
 
     <!-- Header / Navbar -->
     <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur-md border-b border-slate-800/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-2">
-            <!-- Brand Logo with Store Logo Image -->
             <div class="flex items-center gap-3">
                 <div class="w-12 h-12 rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 shadow-lg shrink-0">
-                    <img src="Logo.png.jpg" alt="Anachak Keyla Sport Logo" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518063319789-7217e6706904?w=100';" class="w-full h-full object-cover">
+                    <img src="Logo.png.jpg" alt="Logo" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518063319789-7217e6706904?w=100';" class="w-full h-full object-cover">
                 </div>
                 <div>
                     <h1 class="text-lg md:text-2xl font-extrabold tracking-tight text-white">អាណាចក្រកីឡា</h1>
@@ -46,26 +45,26 @@
                 </div>
             </div>
 
-            <nav class="hidden lg:flex items-center gap-7 text-sm font-medium text-slate-300">
-                <a href="#home" class="text-yellow-400 font-semibold transition-colors">ទំព័រដើម</a>
-                <a href="#products" class="hover:text-yellow-400 transition-colors">ម៉ូដអាវកីឡា ($7.50)</a>
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#home" class="text-yellow-400 font-semibold">ទំព័រដើម</a>
+                <a href="#products" class="hover:text-yellow-400 transition-colors">ទំនិញទាំងអស់</a>
                 <button onclick="openSizeChartModal()" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
                     <i class="ph-bold ph-ruler text-yellow-500"></i>
-                    <span>តារាងទំហំអាវ (Size Chart)</span>
+                    <span>តារាងទំហំអាវ</span>
                 </button>
                 <a href="https://t.me/anachakkeylasport" target="_blank" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
                     <i class="ph-fill ph-telegram-logo text-sky-400"></i>
-                    <span>ឆាតកម្ម៉ង់ផ្ទាល់</span>
+                    <span>ឆាតតេឡេក្រាម</span>
                 </a>
             </nav>
 
-            <div class="flex items-center gap-2 md:gap-3">
-                <button onclick="openSizeChartModal()" class="lg:hidden bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 p-2.5 rounded-xl text-xs font-semibold flex items-center gap-1.5 transition-all" title="តារាងទំហំអាវ">
+            <div class="flex items-center gap-2">
+                <button onclick="openSizeChartModal()" class="lg:hidden bg-slate-800 text-slate-200 p-2.5 rounded-xl text-xs font-semibold" title="តារាងទំហំ">
                     <i class="ph-bold ph-ruler text-yellow-400 text-lg"></i>
                 </button>
-                <button onclick="toggleCart()" class="relative bg-yellow-500 hover:bg-yellow-400 text-slate-950 px-3.5 py-2.5 md:px-4 md:py-2.5 rounded-xl font-extrabold flex items-center gap-2 transition-all shadow-lg shadow-yellow-500/20 active:scale-95">
+                <button onclick="toggleCart()" class="relative bg-yellow-500 hover:bg-yellow-400 text-slate-950 px-4 py-2.5 rounded-xl font-extrabold flex items-center gap-2 shadow-lg transition-all">
                     <i class="ph-bold ph-shopping-bag text-xl"></i>
-                    <span class="hidden md:inline text-sm">កន្ត្រកកម្ម៉ង់</span>
+                    <span class="hidden md:inline text-sm">កន្ត្រក</span>
                     <span id="cart-count" class="bg-slate-950 text-yellow-400 text-xs font-extrabold px-2 py-0.5 rounded-full">0</span>
                 </button>
             </div>
@@ -73,40 +72,34 @@
     </header>
 
     <!-- Hero Banner -->
-    <section id="home" class="relative hero-gradient overflow-hidden border-b border-slate-800/80">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div class="lg:col-span-7 space-y-5 text-center lg:text-left">
-                    <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold">
-                        <span>តម្លៃពិសេសត្រឹមតែ 7.5 $ ($7.50) គ្រប់ម៉ូដ!</span>
-                    </div>
-                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-                        កាតាឡុកឈុតកីឡា <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
-                    </h2>
-                    <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        សូមស្វាគមន៍មកកាន់ <strong class="text-white">អាណាចក្រកីឡា - Anachak Keyla Sport</strong>! រួមបញ្ចូលម៉ូដកីឡាសរុបជាង ៣៤២ ម៉ូដ តម្លៃត្រឹមតែ 7.5 $ ប៉ុណ្ណោះ។
-                    </p>
-                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
-                        <a href="#products" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl shadow-lg flex items-center gap-2 text-sm">
-                            <i class="ph-bold ph-t-shirt text-lg"></i>
-                            <span>មើលម៉ូដអាវទាំងអស់</span>
-                        </a>
-                    </div>
+    <section id="home" class="relative hero-gradient overflow-hidden border-b border-slate-800/80 py-12 md:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-2xl space-y-4">
+                <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 px-4 py-1 rounded-full text-xs font-bold">
+                    <span>ហាងលក់សម្ភារៈ និងឈុតកីឡាគ្រប់ប្រភេទ</span>
                 </div>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+                    ស្វាគមន៍មកកាន់ <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
+                </h2>
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed">
+                    ទីតាំងលក់ឈុតកីឡា (តម្លៃចាប់ពី 7.50$) ស្បែកជើងបាល់ទាត់ ស្រោមជើង សាប៉ាយបាញ់ និងសម្ភារៈកីឡាជាច្រើនមុខទៀត។
+                </p>
             </div>
         </div>
     </section>
 
     <!-- Main Products Catalog -->
     <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
-            <div>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-white flex items-center gap-2.5">
-                    <i class="ph-fill ph-fire text-yellow-500"></i>
-                    <span>បញ្ជីម៉ូដអាវកីឡាទាំងអស់ (តម្លៃ 7.5 $)</span>
-                </h2>
-            </div>
+        <!-- Category Filter Buttons -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar">
+            <button onclick="filterCategory('all')" id="cat-btn-all" class="category-btn bg-yellow-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all">ទំនិញទាំងអស់</button>
+            <button onclick="filterCategory('jersey')" id="cat-btn-jersey" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">ឈុតកីឡា ($7.50)</button>
+            <button onclick="filterCategory('boots')" id="cat-btn-boots" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">ស្បែកជើងបាល់ទាត់</button>
+            <button onclick="filterCategory('socks')" id="cat-btn-socks" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">ស្រោមជើង</button>
+            <button onclick="filterCategory('spray')" id="cat-btn-spray" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">សាប៉ាយបាញ់ (ថ្នាំកីឡា)</button>
+            <button onclick="filterCategory('gear')" id="cat-btn-gear" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">សម្ភារៈផ្សេងៗ</button>
         </div>
+
         <!-- Product Grid -->
         <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Rendered via JS -->
@@ -114,17 +107,30 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center text-xs text-slate-500">
-            <p>© 2026 អាណាចក្រកីឡា - Anachak Keyla Sport. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
-        </div>
+    <footer class="bg-slate-900 border-t border-slate-800 mt-12 py-8 text-center text-xs text-slate-500">
+        <p>© 2026 អាណាចក្រកីឡា - Anachak Keyla Sport. រក្សាសិទ្ធិគ្រប់យ៉ាង។</p>
     </footer>
+
+    <!-- Image Zoom Modal (LightBox) -->
+    <div id="zoom-modal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeZoomModal()">
+        <div class="relative max-w-2xl w-full bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl" onclick="event.stopPropagation()">
+            <div class="flex items-center justify-between px-5 py-3.5 border-b border-slate-800">
+                <h3 id="zoom-title" class="text-sm font-bold text-white truncate">ពង្រីករូបភាព</h3>
+                <button onclick="closeZoomModal()" class="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-800">
+                    <i class="ph-bold ph-x text-lg"></i>
+                </button>
+            </div>
+            <div class="p-4 bg-slate-950 flex items-center justify-center max-h-[75vh] overflow-auto">
+                <img id="zoom-img" src="" alt="Zoomed" class="max-h-[70vh] w-auto object-contain rounded-xl">
+            </div>
+        </div>
+    </div>
 
     <!-- Size Chart Modal -->
     <div id="size-chart-modal" class="fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm hidden items-center justify-center p-4" onclick="closeSizeChartModal()">
         <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-lg w-full p-6 shadow-2xl space-y-5" onclick="event.stopPropagation()">
             <div class="flex items-center justify-between border-b border-slate-800 pb-4">
-                <h3 class="text-base md:text-lg font-extrabold text-white">តារាងទំហំអាវមនុស្សធំ (Size Chart)</h3>
+                <h3 class="text-base font-extrabold text-white">តារាងទំហំអាវមនុស្សធំ (Size Chart)</h3>
                 <button onclick="closeSizeChartModal()" class="text-slate-400 hover:text-white p-1.5 rounded-xl bg-slate-800">
                     <i class="ph-bold ph-x text-lg"></i>
                 </button>
@@ -133,18 +139,18 @@
                 <table class="w-full text-left border-collapse text-xs md:text-sm">
                     <thead>
                         <tr class="bg-slate-950 text-yellow-400 border-b border-slate-800">
-                            <th class="py-3 px-4 font-extrabold">ទំហំ (Size)</th>
-                            <th class="py-3 px-4 font-extrabold">ទម្ងន់ (Weight)</th>
-                            <th class="py-3 px-4 font-extrabold">កម្ពស់ (Height)</th>
+                            <th class="py-3 px-4">ទំហំ (Size)</th>
+                            <th class="py-3 px-4">ទម្ងន់ (Weight)</th>
+                            <th class="py-3 px-4">កម្ពស់ (Height)</th>
                         </tr>
                     </thead>
                     <tbody class="divide-y divide-slate-800/70 bg-slate-900/60">
-                        <tr><td class="py-2.5 px-4 font-extrabold text-white">S</td><td class="py-2.5 px-4 text-slate-300">45 - 55 kg</td><td class="py-2.5 px-4 text-slate-400">~160 cm</td></tr>
-                        <tr><td class="py-2.5 px-4 font-extrabold text-white">M</td><td class="py-2.5 px-4 text-slate-300">55 - 65 kg</td><td class="py-2.5 px-4 text-slate-400">~165 cm</td></tr>
-                        <tr><td class="py-2.5 px-4 font-extrabold text-white">L</td><td class="py-2.5 px-4 text-slate-300">65 - 75 kg</td><td class="py-2.5 px-4 text-slate-400">~170 cm</td></tr>
-                        <tr><td class="py-2.5 px-4 font-extrabold text-white">XL</td><td class="py-2.5 px-4 text-slate-300">75 - 85 kg</td><td class="py-2.5 px-4 text-slate-400">~175 cm</td></tr>
-                        <tr><td class="py-2.5 px-4 font-extrabold text-white">XXL</td><td class="py-2.5 px-4 text-slate-300">85 - 95 kg</td><td class="py-2.5 px-4 text-slate-400">~180 cm</td></tr>
-                        <tr><td class="py-2.5 px-4 font-extrabold text-white">XXXL</td><td class="py-2.5 px-4 text-slate-300">95 - 100 kg</td><td class="py-2.5 px-4 text-slate-400">~185 cm</td></tr>
+                        <tr><td class="py-2 px-4 font-bold text-white">S</td><td class="py-2 px-4 text-slate-300">45 - 55 kg</td><td class="py-2 px-4 text-slate-400">~160 cm</td></tr>
+                        <tr><td class="py-2 px-4 font-bold text-white">M</td><td class="py-2 px-4 text-slate-300">55 - 65 kg</td><td class="py-2 px-4 text-slate-400">~165 cm</td></tr>
+                        <tr><td class="py-2 px-4 font-bold text-white">L</td><td class="py-2 px-4 text-slate-300">65 - 75 kg</td><td class="py-2 px-4 text-slate-400">~170 cm</td></tr>
+                        <tr><td class="py-2 px-4 font-bold text-white">XL</td><td class="py-2 px-4 text-slate-300">75 - 85 kg</td><td class="py-2 px-4 text-slate-400">~175 cm</td></tr>
+                        <tr><td class="py-2 px-4 font-bold text-white">XXL</td><td class="py-2 px-4 text-slate-300">85 - 95 kg</td><td class="py-2 px-4 text-slate-400">~180 cm</td></tr>
+                        <tr><td class="py-2 px-4 font-bold text-white">XXXL</td><td class="py-2 px-4 text-slate-300">95 - 100 kg</td><td class="py-2 px-4 text-slate-400">~185 cm</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -156,7 +162,7 @@
         <div onclick="toggleCart()" class="fixed inset-0 bg-slate-950/75 backdrop-blur-sm"></div>
         <div class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-slate-900 border-l border-slate-800 flex flex-col z-10 shadow-2xl">
             <div class="p-5 border-b border-slate-800 flex items-center justify-between">
-                <h3 class="text-base md:text-lg font-extrabold text-white">កន្ត្រកទំនិញរបស់អ្នក</h3>
+                <h3 class="text-base font-extrabold text-white">កន្ត្រកទំនិញរបស់អ្នក</h3>
                 <button onclick="toggleCart()" class="text-slate-400 hover:text-white p-1.5 rounded-xl bg-slate-800">
                     <i class="ph-bold ph-x text-lg"></i>
                 </button>
@@ -164,7 +170,7 @@
             <div id="cart-items" class="p-4 flex-grow overflow-y-auto space-y-3">
                 <!-- Cart items -->
             </div>
-            <div class="p-5 border-t border-slate-800 bg-slate-950/90 space-y-3.5">
+            <div class="p-5 border-t border-slate-800 bg-slate-950/90 space-y-3">
                 <input id="cust-phone" type="text" placeholder="លេខទូរស័ព្ទរបស់អ្នក..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none">
                 <input id="cust-location" type="text" placeholder="ទីតាំងដឹកជញ្ជូន (ខេត្ត/ក្រុង)..." class="w-full bg-slate-900 border border-slate-800 rounded-xl px-3 py-2 text-xs text-white outline-none">
                 <div class="flex items-center justify-between text-sm font-bold pt-1">
@@ -223,46 +229,102 @@
             "photo_97_2026-10-22_18-06-33.jpg", "photo_98_2026-10-22_18-06-33.jpg", "photo_99_2026-10-22_18-06-33.jpg"
         ];
 
+        // បង្កើតបញ្ជីផលិតផល (រួមបញ្ចូលទាំងឈុតកីឡា និងសម្ភារៈកីឡាផ្សេងៗ)
         for (let i = 1; i <= 342; i++) {
             const fileName = exactImageFiles[(i - 1) % exactImageFiles.length];
+            let category = 'jersey';
+            let name = `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`;
+            let price = 7.50;
+
+            // ចែកប្រភេទជាសម្ភារៈកីឡាផ្សេងៗសម្រាប់ទំនិញមួយចំនួន
+            if (i % 25 === 0) {
+                category = 'boots';
+                name = `ស្បែកជើងបាល់ទាត់ Pro ម៉ូដទី ${i}`;
+                price = 25.00;
+            } else if (i % 15 === 0) {
+                category = 'socks';
+                name = `ស្រោមជើងកីឡាប្រដាប់ការពារ ម៉ូដ ${i}`;
+                price = 2.50;
+            } else if (i % 10 === 0) {
+                category = 'spray';
+                name = `សាប៉ាយបាញ់ (ថ្នាំបាញ់សសៃ) ស្ព័រ`;
+                price = 4.00;
+            } else if (i % 8 === 0) {
+                category = 'gear';
+                name = `ខ្នាតការពារជង្គង់/កែងដៃ កីឡា`;
+                price = 5.00;
+            }
+
             products.push({
                 id: i,
                 code: `#AK-${String(i).padStart(3, '0')}`,
-                name: `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`,
-                price: 7.50,
-                badge: i <= 20 ? "លក់ដាច់" : "ស្តុកថ្មី",
+                name: name,
+                price: price,
+                category: category,
                 imagePath: fileName
             });
         }
 
+        let currentCategory = 'all';
         let cart = [];
         let selectedSizes = {};
         let selectedQtys = {};
 
+        function filterCategory(cat) {
+            currentCategory = cat;
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.className = "category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800";
+            });
+            let activeBtnId = 'cat-btn-all';
+            if (cat === 'jersey') activeBtnId = 'cat-btn-jersey';
+            if (cat === 'boots') activeBtnId = 'cat-btn-boots';
+            if (cat === 'socks') activeBtnId = 'cat-btn-socks';
+            if (cat === 'spray') activeBtnId = 'cat-btn-spray';
+            if (cat === 'gear') activeBtnId = 'cat-btn-gear';
+
+            const activeBtn = document.getElementById(activeBtnId);
+            if (activeBtn) {
+                activeBtn.className = "category-btn bg-yellow-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all";
+            }
+            renderProducts();
+        }
+
         function renderProducts() {
             const grid = document.getElementById('product-grid');
-            grid.innerHTML = products.map(product => {
+            const filtered = currentCategory === 'all' ? products : products.filter(p => p.category === currentCategory);
+
+            grid.innerHTML = filtered.map(product => {
                 const currentSize = selectedSizes[product.id] || 'L';
                 const currentQty = selectedQtys[product.id] || 1;
+                const isJersey = product.category === 'jersey';
+
                 return `
-                <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-4 flex flex-col justify-between">
+                <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-4 flex flex-col justify-between shadow-xl">
                     <div>
-                        <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518063319789-7217e6706904?w=400';" class="w-full h-56 object-cover rounded-2xl mb-3 bg-slate-800" loading="lazy">
+                        <!-- រូបភាពចុចពង្រីក (Zoom) -->
+                        <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-slate-800 mb-3 cursor-pointer group" onclick="openZoomModal('${product.imagePath}', '${product.name.replace(/'/g, "\\'")}')">
+                            <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518063319789-7217e6706904?w=400';" class="product-img w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                            <div class="absolute bottom-2 right-2 bg-slate-950/80 text-white px-2 py-1 rounded-lg text-[10px] flex items-center gap-1">
+                                <i class="ph-bold ph-magnifying-glass-plus text-yellow-400"></i> ពង្រីក
+                            </div>
+                        </div>
+
                         <div class="flex justify-between items-start">
-                            <h3 class="text-white font-bold text-sm">${product.name}</h3>
-                            <span class="text-yellow-400 font-extrabold text-base">$${product.price.toFixed(2)}</span>
+                            <h3 class="text-white font-bold text-sm leading-snug">${product.name}</h3>
+                            <span class="text-yellow-400 font-extrabold text-base shrink-0">$${product.price.toFixed(2)}</span>
                         </div>
                         <span class="text-xs text-yellow-500 font-mono">${product.code}</span>
                     </div>
 
                     <div class="mt-4 space-y-3">
+                        ${isJersey ? `
                         <div class="grid grid-cols-6 gap-1">
                             ${ADULT_SIZES.map(size => `
                                 <button type="button" onclick="selectSize(${product.id}, '${size}')" class="py-1 rounded text-xs font-bold border ${currentSize === size ? 'bg-yellow-500 text-slate-950 border-yellow-400' : 'bg-slate-950 text-slate-300 border-slate-800'}">
                                     ${size}
                                 </button>
                             `).join('')}
-                        </div>
+                        </div>` : ''}
 
                         <div class="flex items-center justify-between gap-2">
                             <div class="flex items-center bg-slate-950 border border-slate-800 rounded-xl p-1">
@@ -284,7 +346,7 @@
 
         function addToCart(id) {
             const prod = products.find(p => p.id === id);
-            const size = selectedSizes[id] || 'L';
+            const size = (prod.category === 'jersey') ? (selectedSizes[id] || 'L') : 'Free Size';
             const qty = selectedQtys[id] || 1;
             const key = `${id}_${size}`;
             
@@ -294,7 +356,7 @@
 
             selectedQtys[id] = 1;
             updateCartUI();
-            showToast(`បានបន្ថែម ${prod.code} (Size ${size}) ចូលកន្ត្រក!`);
+            showToast(`បានបន្ថែម ${prod.code} ចូលកន្ត្រក!`);
         }
 
         function removeFromCart(key) {
@@ -313,7 +375,7 @@
                 <div class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800">
                     <img src="${i.imagePath}" class="w-12 h-12 object-cover rounded-lg">
                     <div class="flex-grow">
-                        <h4 class="text-xs font-bold text-white">${i.code} - Size: ${i.size}</h4>
+                        <h4 class="text-xs font-bold text-white">${i.code} - ${i.size !== 'Free Size' ? 'Size: '+i.size : i.name}</h4>
                         <p class="text-xs text-yellow-400">$${i.price} x ${i.qty} = $${(i.price * i.qty).toFixed(2)}</p>
                     </div>
                     <button onclick="removeFromCart('${i.key}')" class="text-red-400"><i class="ph-bold ph-trash"></i></button>
@@ -321,17 +383,32 @@
         }
 
         function toggleCart() { document.getElementById('cart-drawer').classList.toggle('hidden'); }
+        
+        // Image Zoom Modal Functions
+        function openZoomModal(imgSrc, title) {
+            document.getElementById('zoom-img').src = imgSrc;
+            document.getElementById('zoom-title').textContent = title;
+            const modal = document.getElementById('zoom-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        function closeZoomModal() {
+            const modal = document.getElementById('zoom-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
         function openSizeChartModal() { document.getElementById('size-chart-modal').classList.remove('hidden'); document.getElementById('size-chart-modal').classList.add('flex'); }
         function closeSizeChartModal() { document.getElementById('size-chart-modal').classList.add('hidden'); }
 
         function checkoutViaTelegram() {
             if (cart.length === 0) { showToast("សូមជ្រើសរើសទំនិញជាមុនសិន!"); return; }
-            const phone = document.getElementById('cust-phone').value || 'មិនระบุ';
-            const location = document.getElementById('cust-location').value || 'មិនระบุ';
+            const phone = document.getElementById('cust-phone').value || 'មិនបញ្ជាក់';
+            const location = document.getElementById('cust-location').value || 'មិនបញ្ជាក់';
             const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
             
             let text = `សួស្តីហាង អាណាចក្រកីឡា! ខ្ញុំចង់កម្ម៉ង់ទំនិញ៖\n` +
-                cart.map((i, idx) => `${idx+1}. ${i.code} | Size: ${i.size} | ${i.qty}ឈុត ($${i.price * i.qty})`).join('\n') +
+                cart.map((i, idx) => `${idx+1}. ${i.code} - ${i.name} ${i.size !== 'Free Size' ? '(Size: '+i.size+')' : ''} | ${i.qty}ដំ/ឈុត ($${i.price * i.qty})`).join('\n') +
                 `\n\n💰 សរុប: $${total.toFixed(2)}\n📞 លេខទូរស័ព្ទ: ${phone}\n📍 ទីតាំង: ${location}`;
 
             window.open(`https://t.me/anachakkeylasport?text=${encodeURIComponent(text)}`, '_blank');
