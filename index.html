@@ -11,17 +11,9 @@
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        body {
-            font-family: 'Kantumruy Pro', 'Battambang', sans-serif;
-        }
-        .hero-gradient {
-            background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%, #020617 100%);
-        }
-        .product-card:hover .product-img {
-            transform: scale(1.05);
-        }
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        body { font-family: 'Kantumruy Pro', 'Battambang', sans-serif; }
+        .hero-gradient { background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%, #020617 100%); }
+        .product-card:hover .product-img { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-yellow-500 selection:text-slate-950">
@@ -30,7 +22,7 @@
     <div class="bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-500 text-slate-950 text-xs md:text-sm font-bold py-2 px-4 text-center shadow-sm">
         <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
             <i class="ph-fill ph-seal-check text-lg"></i>
-            <span>ឈុតកីឡា ស្បែកជើង ស្រោមជើង និងសម្ភារៈកីឡាគុណភាពខ្ពស់! កម្ម៉ង់តាម Telegram: <strong>@anachakkeylasport</strong></span>
+            <span>ឈុតកីឡាសាច់ក្រណាត់គុណភាពខ្ពស់ តម្លៃពិសេសត្រឹមតែ <strong>7.5 $</strong> គ្រប់ម៉ូដ! កម្ម៉ង់តាម Telegram: <strong>@anachakkeylasport</strong></span>
         </div>
     </div>
 
@@ -49,10 +41,10 @@
 
             <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
                 <a href="#home" class="text-yellow-400 font-semibold">ទំព័រដើម</a>
-                <a href="#products" class="hover:text-yellow-400 transition-colors">ផលិតផលទាំងអស់</a>
+                <a href="#products" class="hover:text-yellow-400 transition-colors">ម៉ូដឈុតកីឡា ($7.50)</a>
                 <button onclick="openSizeChartModal()" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
                     <i class="ph-bold ph-ruler text-yellow-500"></i>
-                    <span>តារាងទំហំ</span>
+                    <span>តារាងទំហំអាវ</span>
                 </button>
                 <a href="https://t.me/anachakkeylasport" target="_blank" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
                     <i class="ph-fill ph-telegram-logo text-sky-400"></i>
@@ -78,13 +70,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="max-w-2xl space-y-4">
                 <div class="inline-flex items-center gap-2 bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 px-4 py-1 rounded-full text-xs font-bold">
-                    <span>ហាងលក់សម្ភារៈ និងឈុតកីឡាគ្រប់ប្រភេទ</span>
+                    <span>ហាងលក់ឈុតកីឡាគុណភាពខ្ពស់</span>
                 </div>
                 <h2 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
-                    ស្វាគមន៍មកកាន់ <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
+                    កាតាឡុកឈុតកីឡា <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
                 </h2>
                 <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                    ជ្រើសរើសប្រភេទផលិតផលតាមតម្រូវការ៖ ឈុតកីឡា, ស្បែកជើងបាល់ទាត់, ស្រោមជើង, សាប៉ាយបាញ់ និងសម្ភារៈកីឡាជាច្រើនទៀត។
+                    រួមបញ្ចូលម៉ូដឈុតកីឡាស្អាតៗជាង ៣៤២ ម៉ូដ តម្លៃត្រឹមតែ 7.50$ ប៉ុណ្ណោះ។ ចុចលើរូបភាពដើម្បីពង្រីកមើលឱ្យកាន់តែច្បាស់។
                 </p>
             </div>
         </div>
@@ -92,20 +84,10 @@
 
     <!-- Main Products Catalog -->
     <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
-        <!-- Category Zones (Tabs) -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar border-b border-slate-800">
-            <button onclick="filterCategory('jersey')" id="cat-btn-jersey" class="category-btn bg-yellow-500 text-slate-950 font-extrabold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all shadow-md">👕 ឈុតកីឡា ($7.50)</button>
-            <button onclick="filterCategory('boots')" id="cat-btn-boots" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">👟 ស្បែកជើងបាល់ទាត់</button>
-            <button onclick="filterCategory('socks')" id="cat-btn-socks" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">🧦 ស្រោមជើងកីឡា</button>
-            <button onclick="filterCategory('spray')" id="cat-btn-spray" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">🧴 សាប៉ាយបាញ់ (ថ្នាំកីឡា)</button>
-            <button onclick="filterCategory('gear')" id="cat-btn-gear" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">🎒 សម្ភារៈផ្សេងៗ</button>
-        </div>
-
-        <!-- Section Title for Current Zone -->
         <div class="mb-6 flex items-center justify-between">
-            <h3 id="zone-title" class="text-xl md:text-2xl font-extrabold text-white flex items-center gap-2.5">
+            <h3 class="text-xl md:text-2xl font-extrabold text-white flex items-center gap-2.5">
                 <i class="ph-fill ph-t-shirt text-yellow-500"></i>
-                <span id="zone-title-text">ឈុតកីឡាទាំងអស់</span>
+                <span>បញ្ជីម៉ូដឈុតកីឡាទាំងអស់ ($7.50)</span>
             </h3>
         </div>
 
@@ -202,102 +184,139 @@
 
     <script>
         const ADULT_SIZES = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
-        const BOOT_SIZES = ['39', '40', '41', '42', '43', '44'];
+
+        // បញ្ជីឈ្មោះ File រូបភាពពិតប្រាកដ និងពេញលេញទាំងស្រុងតាមការផ្ញើជូន
+        const realImages = [
+            "photo_10_2026-10-22_18-04-44.jpg", "photo_10_2026-10-22_18-06-33.jpg", "photo_10_2026-10-22_18-07-36.jpg", "photo_10_2026-10-22_18-07-47.jpg",
+            "photo_11_2026-10-22_18-04-44.jpg", "photo_11_2026-10-22_18-06-33.jpg", "photo_11_2026-10-22_18-07-36.jpg", "photo_11_2026-10-22_18-07-47.jpg",
+            "photo_12_2026-10-22_18-04-44.jpg", "photo_12_2026-10-22_18-06-33.jpg", "photo_12_2026-10-22_18-07-36.jpg", "photo_12_2026-10-22_18-07-47.jpg",
+            "photo_13_2026-10-22_18-04-44.jpg", "photo_13_2026-10-22_18-06-33.jpg", "photo_13_2026-10-22_18-07-36.jpg", "photo_13_2026-10-22_18-07-47.jpg",
+            "photo_14_2026-10-22_18-04-44.jpg", "photo_14_2026-10-22_18-06-33.jpg", "photo_14_2026-10-22_18-07-36.jpg", "photo_14_2026-10-22_18-07-47.jpg",
+            "photo_15_2026-10-22_18-04-44.jpg", "photo_15_2026-10-22_18-06-33.jpg", "photo_15_2026-10-22_18-07-36.jpg", "photo_15_2026-10-22_18-07-47.jpg",
+            "photo_16_2026-10-22_18-04-44.jpg", "photo_16_2026-10-22_18-06-33.jpg", "photo_16_2026-10-22_18-07-47.jpg",
+            "photo_17_2026-10-22_18-04-44.jpg", "photo_17_2026-10-22_18-06-33.jpg", "photo_17_2026-10-22_18-07-36.jpg", "photo_17_2026-10-22_18-07-47.jpg",
+            "photo_18_2026-10-22_18-04-44.jpg", "photo_18_2026-10-22_18-06-33.jpg", "photo_18_2026-10-22_18-07-36.jpg", "photo_18_2026-10-22_18-07-47.jpg",
+            "photo_19_2026-10-22_18-04-44.jpg", "photo_19_2026-10-22_18-06-33.jpg", "photo_19_2026-10-22_18-07-36.jpg", "photo_19_2026-10-22_18-07-47.jpg",
+            "photo_1_2026-10-22_18-04-44.jpg", "photo_1_2026-10-22_18-06-33.jpg", "photo_1_2026-10-22_18-07-35.jpg", "photo_1_2026-10-22_18-07-47.jpg",
+            "photo_20_2026-10-22_18-04-44.jpg", "photo_20_2026-10-22_18-06-33.jpg", "photo_20_2026-10-22_18-07-47.jpg",
+            "photo_21_2026-10-22_18-04-44.jpg", "photo_21_2026-10-22_18-06-33.jpg", "photo_21_2026-10-22_18-07-47.jpg",
+            "photo_22_2026-10-22_18-04-44.jpg", "photo_22_2026-10-22_18-06-33.jpg", "photo_22_2026-10-22_18-07-47.jpg",
+            "photo_23_2026-10-22_18-04-44.jpg", "photo_23_2026-10-22_18-06-33.jpg", "photo_23_2026-10-22_18-07-47.jpg",
+            "photo_24_2026-10-22_18-04-44.jpg", "photo_24_2026-10-22_18-06-33.jpg", "photo_24_2026-10-22_18-07-47.jpg",
+            "photo_25_2026-10-22_18-04-44.jpg", "photo_25_2026-10-22_18-06-33.jpg", "photo_25_2026-10-22_18-07-47.jpg",
+            "photo_26_2026-10-22_18-04-44.jpg", "photo_26_2026-10-22_18-06-33.jpg", "photo_26_2026-10-22_18-07-47.jpg",
+            "photo_27_2026-10-22_18-04-44.jpg", "photo_27_2026-10-22_18-06-33.jpg", "photo_27_2026-10-22_18-07-47.jpg",
+            "photo_28_2026-10-22_18-04-44.jpg", "photo_28_2026-10-22_18-06-33.jpg", "photo_28_2026-10-22_18-07-47.jpg",
+            "photo_29_2026-10-22_18-04-44.jpg", "photo_29_2026-10-22_18-06-33.jpg", "photo_29_2026-10-22_18-07-47.jpg",
+            "photo_2_2026-10-22_18-04-44.jpg", "photo_2_2026-10-22_18-06-33.jpg", "photo_2_2026-10-22_18-07-35.jpg", "photo_2_2026-10-22_18-07-47.jpg",
+            "photo_30_2026-10-22_18-04-44.jpg", "photo_30_2026-10-22_18-06-33.jpg", "photo_30_2026-10-22_18-07-47.jpg",
+            "photo_31_2026-10-22_18-04-44.jpg", "photo_31_2026-10-22_18-06-33.jpg", "photo_31_2026-10-22_18-07-47.jpg",
+            "photo_32_2026-10-22_18-04-44.jpg", "photo_32_2026-10-22_18-06-33.jpg", "photo_32_2026-10-22_18-07-47.jpg",
+            "photo_33_2026-10-22_18-04-44.jpg", "photo_33_2026-10-22_18-06-33.jpg", "photo_33_2026-10-22_18-07-36.jpg", "photo_33_2026-10-22_18-07-47.jpg",
+            "photo_34_2026-10-22_18-04-44.jpg", "photo_34_2026-10-22_18-06-33.jpg", "photo_34_2026-10-22_18-07-36.jpg", "photo_34_2026-10-22_18-07-47.jpg",
+            "photo_35_2026-10-22_18-04-44.jpg", "photo_35_2026-10-22_18-06-33.jpg", "photo_35_2026-10-22_18-07-36.jpg", "photo_35_2026-10-22_18-07-47.jpg",
+            "photo_36_2026-10-22_18-04-44.jpg", "photo_36_2026-10-22_18-06-33.jpg", "photo_36_2026-10-22_18-07-36.jpg", "photo_36_2026-10-22_18-07-47.jpg",
+            "photo_37_2026-10-22_18-04-44.jpg", "photo_37_2026-10-22_18-06-33.jpg", "photo_37_2026-10-22_18-07-36.jpg", "photo_37_2026-10-22_18-07-47.jpg",
+            "photo_38_2026-10-22_18-04-44.jpg", "photo_38_2026-10-22_18-06-33.jpg", "photo_38_2026-10-22_18-07-36.jpg", "photo_38_2026-10-22_18-07-47.jpg",
+            "photo_39_2026-10-22_18-04-44.jpg", "photo_39_2026-10-22_18-06-33.jpg", "photo_39_2026-10-22_18-07-36.jpg", "photo_39_2026-10-22_18-07-47.jpg",
+            "photo_3_2026-10-22_18-04-44.jpg", "photo_3_2026-10-22_18-06-33.jpg", "photo_3_2026-10-22_18-07-35.jpg", "photo_3_2026-10-22_18-07-47.jpg",
+            "photo_40_2026-10-22_18-04-44.jpg", "photo_40_2026-10-22_18-06-33.jpg", "photo_40_2026-10-22_18-07-36.jpg", "photo_40_2026-10-22_18-07-47.jpg",
+            "photo_41_2026-10-22_18-04-44.jpg", "photo_41_2026-10-22_18-06-33.jpg", "photo_41_2026-10-22_18-07-36.jpg", "photo_41_2026-10-22_18-07-47.jpg",
+            "photo_42_2026-10-22_18-04-44.jpg", "photo_42_2026-10-22_18-06-33.jpg", "photo_42_2026-10-22_18-07-36.jpg", "photo_42_2026-10-22_18-07-47.jpg",
+            "photo_43_2026-10-22_18-04-44.jpg", "photo_43_2026-10-22_18-06-33.jpg", "photo_43_2026-10-22_18-07-36.jpg", "photo_43_2026-10-22_18-07-47.jpg",
+            "photo_44_2026-10-22_18-04-44.jpg", "photo_44_2026-10-22_18-06-33.jpg", "photo_44_2026-10-22_18-07-36.jpg", "photo_44_2026-10-22_18-07-47.jpg",
+            "photo_45_2026-10-22_18-04-44.jpg", "photo_45_2026-10-22_18-06-33.jpg", "photo_45_2026-10-22_18-07-36.jpg", "photo_45_2026-10-22_18-07-47.jpg",
+            "photo_46_2026-10-22_18-04-44.jpg", "photo_46_2026-10-22_18-06-33.jpg", "photo_46_2026-10-22_18-07-36.jpg", "photo_46_2026-10-22_18-07-47.jpg",
+            "photo_47_2026-10-22_18-04-44.jpg", "photo_47_2026-10-22_18-06-33.jpg", "photo_47_2026-10-22_18-07-36.jpg", "photo_47_2026-10-22_18-07-47.jpg",
+            "photo_48_2026-10-22_18-04-44.jpg", "photo_48_2026-10-22_18-06-33.jpg", "photo_48_2026-10-22_18-07-36.jpg", "photo_48_2026-10-22_18-07-47.jpg",
+            "photo_49_2026-10-22_18-04-44.jpg", "photo_49_2026-10-22_18-06-33.jpg", "photo_49_2026-10-22_18-07-36.jpg", "photo_49_2026-10-22_18-07-47.jpg",
+            "photo_4_2026-10-22_18-04-44.jpg", "photo_4_2026-10-22_18-06-33.jpg", "photo_4_2026-10-22_18-07-35.jpg", "photo_4_2026-10-22_18-07-47.jpg",
+            "photo_50_2026-10-22_18-04-44.jpg", "photo_50_2026-10-22_18-06-33.jpg", "photo_50_2026-10-22_18-07-36.jpg", "photo_50_2026-10-22_18-07-47.jpg",
+            "photo_51_2026-10-22_18-04-44.jpg", "photo_51_2026-10-22_18-06-33.jpg", "photo_51_2026-10-22_18-07-36.jpg", "photo_51_2026-10-22_18-07-47.jpg",
+            "photo_52_2026-10-22_18-04-44.jpg", "photo_52_2026-10-22_18-06-33.jpg", "photo_52_2026-10-22_18-07-36.jpg",
+            "photo_53_2026-10-22_18-04-44.jpg", "photo_53_2026-10-22_18-06-33.jpg", "photo_53_2026-10-22_18-07-36.jpg",
+            "photo_54_2026-10-22_18-04-44.jpg", "photo_54_2026-10-22_18-06-33.jpg", "photo_54_2026-10-22_18-07-36.jpg",
+            "photo_55_2026-10-22_18-04-44.jpg", "photo_55_2026-10-22_18-06-33.jpg", "photo_55_2026-10-22_18-07-36.jpg",
+            "photo_56_2026-10-22_18-04-44.jpg", "photo_56_2026-10-22_18-06-33.jpg", "photo_56_2026-10-22_18-07-36.jpg",
+            "photo_57_2026-10-22_18-04-44.jpg", "photo_57_2026-10-22_18-06-33.jpg", "photo_57_2026-10-22_18-07-36.jpg",
+            "photo_58_2026-10-22_18-04-44.jpg", "photo_58_2026-10-22_18-06-33.jpg", "photo_58_2026-10-22_18-07-36.jpg",
+            "photo_59_2026-10-22_18-04-44.jpg", "photo_59_2026-10-22_18-06-33.jpg", "photo_59_2026-10-22_18-07-36.jpg",
+            "photo_5_2026-10-22_18-04-44.jpg", "photo_5_2026-10-22_18-06-33.jpg", "photo_5_2026-10-22_18-07-35.jpg", "photo_5_2026-10-22_18-07-47.jpg",
+            "photo_60_2026-10-22_18-04-44.jpg", "photo_60_2026-10-22_18-06-33.jpg", "photo_60_2026-10-22_18-07-36.jpg",
+            "photo_61_2026-10-22_18-04-44.jpg", "photo_61_2026-10-22_18-06-33.jpg", "photo_61_2026-10-22_18-07-36.jpg",
+            "photo_62_2026-10-22_18-04-44.jpg", "photo_62_2026-10-22_18-06-33.jpg", "photo_62_2026-10-22_18-07-36.jpg",
+            "photo_63_2026-10-22_18-04-44.jpg", "photo_63_2026-10-22_18-06-33.jpg", "photo_63_2026-10-22_18-07-36.jpg",
+            "photo_64_2026-10-22_18-04-44.jpg", "photo_64_2026-10-22_18-06-33.jpg", "photo_64_2026-10-22_18-07-36.jpg",
+            "photo_65_2026-10-22_18-04-44.jpg", "photo_65_2026-10-22_18-06-33.jpg", "photo_65_2026-10-22_18-07-36.jpg",
+            "photo_66_2026-10-22_18-04-44.jpg", "photo_66_2026-10-22_18-06-33.jpg", "photo_66_2026-10-22_18-07-36.jpg",
+            "photo_67_2026-10-22_18-04-44.jpg", "photo_67_2026-10-22_18-06-33.jpg", "photo_67_2026-10-22_18-07-36.jpg",
+            "photo_68_2026-10-22_18-04-44.jpg", "photo_68_2026-10-22_18-06-33.jpg", "photo_68_2026-10-22_18-07-36.jpg",
+            "photo_69_2026-10-22_18-04-44.jpg", "photo_69_2026-10-22_18-06-33.jpg", "photo_69_2026-10-22_18-07-36.jpg",
+            "photo_6_2026-10-22_18-04-44.jpg", "photo_6_2026-10-22_18-06-33.jpg", "photo_6_2026-10-22_18-07-36.jpg", "photo_6_2026-10-22_18-07-47.jpg",
+            "photo_70_2026-10-22_18-04-44.jpg", "photo_70_2026-10-22_18-06-33.jpg", "photo_70_2026-10-22_18-07-36.jpg",
+            "photo_71_2026-10-22_18-04-44.jpg", "photo_71_2026-10-22_18-06-33.jpg", "photo_71_2026-10-22_18-07-36.jpg",
+            "photo_72_2026-10-22_18-04-44.jpg", "photo_72_2026-10-22_18-06-33.jpg", "photo_72_2026-10-22_18-07-36.jpg",
+            "photo_73_2026-10-22_18-04-44.jpg", "photo_73_2026-10-22_18-06-33.jpg", "photo_73_2026-10-22_18-07-36.jpg",
+            "photo_74_2026-10-22_18-04-44.jpg", "photo_74_2026-10-22_18-06-33.jpg", "photo_74_2026-10-22_18-07-36.jpg",
+            "photo_75_2026-10-22_18-04-44.jpg", "photo_75_2026-10-22_18-06-33.jpg", "photo_75_2026-10-22_18-07-36.jpg",
+            "photo_76_2026-10-22_18-04-44.jpg", "photo_76_2026-10-22_18-06-33.jpg", "photo_76_2026-10-22_18-07-36.jpg",
+            "photo_77_2026-10-22_18-04-44.jpg", "photo_77_2026-10-22_18-06-33.jpg", "photo_77_2026-10-22_18-07-36.jpg",
+            "photo_78_2026-10-22_18-04-44.jpg", "photo_78_2026-10-22_18-06-33.jpg", "photo_78_2026-10-22_18-07-36.jpg",
+            "photo_79_2026-10-22_18-04-44.jpg", "photo_79_2026-10-22_18-06-33.jpg", "photo_79_2026-10-22_18-07-36.jpg",
+            "photo_7_2026-10-22_18-04-44.jpg", "photo_7_2026-10-22_18-06-33.jpg", "photo_7_2026-10-22_18-07-36.jpg", "photo_7_2026-10-22_18-07-47.jpg",
+            "photo_80_2026-10-22_18-04-44.jpg", "photo_80_2026-10-22_18-06-33.jpg", "photo_80_2026-10-22_18-07-36.jpg",
+            "photo_81_2026-10-22_18-04-44.jpg", "photo_81_2026-10-22_18-06-33.jpg", "photo_81_2026-10-22_18-07-36.jpg",
+            "photo_82_2026-10-22_18-04-44.jpg", "photo_82_2026-10-22_18-06-33.jpg", "photo_82_2026-10-22_18-07-36.jpg",
+            "photo_83_2026-10-22_18-04-44.jpg", "photo_83_2026-10-22_18-06-33.jpg", "photo_83_2026-10-22_18-07-36.jpg",
+            "photo_84_2026-10-22_18-04-44.jpg", "photo_84_2026-10-22_18-06-33.jpg", "photo_84_2026-10-22_18-07-36.jpg",
+            "photo_85_2026-10-22_18-04-44.jpg", "photo_85_2026-10-22_18-06-33.jpg", "photo_85_2026-10-22_18-07-36.jpg",
+            "photo_86_2026-10-22_18-04-44.jpg", "photo_86_2026-10-22_18-06-33.jpg", "photo_86_2026-10-22_18-07-36.jpg",
+            "photo_87_2026-10-22_18-04-44.jpg", "photo_87_2026-10-22_18-06-33.jpg", "photo_87_2026-10-22_18-07-36.jpg",
+            "photo_88_2026-10-22_18-04-44.jpg", "photo_88_2026-10-22_18-06-33.jpg", "photo_88_2026-10-22_18-07-36.jpg",
+            "photo_89_2026-10-22_18-04-44.jpg", "photo_89_2026-10-22_18-06-33.jpg", "photo_89_2026-10-22_18-07-36.jpg",
+            "photo_8_2026-10-22_18-04-44.jpg", "photo_8_2026-10-22_18-06-33.jpg", "photo_8_2026-10-22_18-07-36.jpg", "photo_8_2026-10-22_18-07-47.jpg",
+            "photo_90_2026-10-22_18-04-44.jpg", "photo_90_2026-10-22_18-06-33.jpg", "photo_90_2026-10-22_18-07-36.jpg",
+            "photo_91_2026-10-22_18-04-44.jpg", "photo_91_2026-10-22_18-06-33.jpg", "photo_91_2026-10-22_18-07-36.jpg",
+            "photo_92_2026-10-22_18-04-44.jpg", "photo_92_2026-10-22_18-06-33.jpg", "photo_92_2026-10-22_18-07-36.jpg",
+            "photo_93_2026-10-22_18-04-44.jpg", "photo_93_2026-10-22_18-06-33.jpg",
+            "photo_94_2026-10-22_18-04-44.jpg", "photo_94_2026-10-22_18-06-33.jpg",
+            "photo_95_2026-10-22_18-04-44.jpg", "photo_95_2026-10-22_18-06-33.jpg",
+            "photo_96_2026-10-22_18-04-44.jpg", "photo_96_2026-10-22_18-06-33.jpg",
+            "photo_97_2026-10-22_18-04-44.jpg", "photo_97_2026-10-22_18-06-33.jpg",
+            "photo_98_2026-10-22_18-04-44.jpg", "photo_98_2026-10-22_18-06-33.jpg",
+            "photo_99_2026-10-22_18-04-44.jpg", "photo_99_2026-10-22_18-06-33.jpg",
+            "photo_9_2026-10-22_18-04-44.jpg", "photo_9_2026-10-22_18-06-33.jpg", "photo_9_2026-10-22_18-07-36.jpg"
+        ];
 
         const products = [];
         
-        // បង្កើតផលិតផលទាំង ៣៤២ រូប និងបែងចែក Zone យ៉ាងច្បាស់លាស់
         for (let i = 1; i <= 342; i++) {
-            let category = 'jersey';
-            let name = `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`;
-            let price = 7.50;
-
-            // ចែកប្រភេទផលិតផលតាមលំដាប់រៀង
-            if (i % 5 === 0) {
-                category = 'boots';
-                name = `ស្បែកជើងបាល់ទាត់ Pro ម៉ូដទី ${i}`;
-                price = 28.00;
-            } else if (i % 4 === 0) {
-                category = 'socks';
-                name = `ស្រោមជើងកីឡាការពារជើង ម៉ូដ ${i}`;
-                price = 2.50;
-            } else if (i % 3 === 0) {
-                category = 'spray';
-                name = `សាប៉ាយបាញ់ (ថ្នាំកីឡា) ស្ព័រ`;
-                price = 4.00;
-            } else if (i % 2 === 0 && i % 5 !== 0) {
-                category = 'gear';
-                name = `សម្ភារៈការពារ និងកាតាបកីឡា ម៉ូដ ${i}`;
-                price = 6.00;
-            }
-
-            const possibleSuffixes = [
-                "_2026-10-22_18-04-44.jpg",
-                "_2026-10-22_18-06-33.jpg",
-                "_2026-10-22_18-07-36.jpg",
-                "_2026-10-22_18-07-47.jpg"
-            ];
-            const suffix = possibleSuffixes[(i - 1) % possibleSuffixes.length];
-            const imgFileName = `photo_${i}${suffix}`;
-
+            const imgFileName = exactRealImages[(i - 1) % exactRealImages.length];
             products.push({
                 id: i,
                 code: `#AK-${String(i).padStart(3, '0')}`,
-                name: name,
-                price: price,
-                category: category,
+                name: `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`,
+                price: 7.50,
                 imagePath: imgFileName
             });
         }
 
-        let currentCategory = 'jersey'; // ចាប់ផ្តើមដំបូងបង្ហាញ Zone ឈុតកីឡា
         let cart = [];
         let selectedSizes = {};
         let selectedQtys = {};
 
-        function filterCategory(cat) {
-            currentCategory = cat;
-            document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.className = "category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800";
-            });
-            
-            let activeBtnId = 'cat-btn-jersey';
-            let titleText = 'ឈុតកីឡាទាំងអស់';
-            let iconClass = 'ph-fill ph-t-shirt text-yellow-500';
-
-            if (cat === 'jersey') { activeBtnId = 'cat-btn-jersey'; titleText = 'ឈុតកីឡាទាំងអស់ ($7.50)'; iconClass = 'ph-fill ph-t-shirt text-yellow-500'; }
-            if (cat === 'boots') { activeBtnId = 'cat-btn-boots'; titleText = 'ស្បែកជើងបាល់ទាត់ Pro'; iconClass = 'ph-fill ph-sneaker text-yellow-500'; }
-            if (cat === 'socks') { activeBtnId = 'cat-btn-socks'; titleText = 'ស្រោមជើងកីឡា'; iconClass = 'ph-fill ph-soccer-ball text-yellow-500'; }
-            if (cat === 'spray') { activeBtnId = 'cat-btn-spray'; titleText = 'សាប៉ាយបាញ់ (ថ្នាំកីឡា)'; iconClass = 'ph-fill ph-first-aid text-yellow-500'; }
-            if (cat === 'gear') { activeBtnId = 'cat-btn-gear'; titleText = 'សម្ភារៈកីឡាផ្សេងៗ'; iconClass = 'ph-fill ph-backpack text-yellow-500'; }
-
-            const activeBtn = document.getElementById(activeBtnId);
-            if (activeBtn) {
-                activeBtn.className = "category-btn bg-yellow-500 text-slate-950 font-extrabold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all shadow-md";
-            }
-
-            document.getElementById('zone-title-text').textContent = titleText;
-            document.getElementById('zone-title').innerHTML = `<i class="${iconClass}"></i> <span id="zone-title-text">${titleText}</span>`;
-
-            renderProducts();
-        }
-
         function renderProducts() {
             const grid = document.getElementById('product-grid');
-            const filtered = products.filter(p => p.category === currentCategory);
-
-            grid.innerHTML = filtered.map(product => {
-                const currentSize = selectedSizes[product.id] || (product.category === 'boots' ? '41' : 'L');
+            grid.innerHTML = products.map(product => {
+                const currentSize = selectedSizes[product.id] || 'L';
                 const currentQty = selectedQtys[product.id] || 1;
-                const isJersey = product.category === 'jersey';
-                const isBoots = product.category === 'boots';
 
                 return `
                 <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-4 flex flex-col justify-between shadow-xl">
                     <div>
                         <!-- ចុចដើម្បីពង្រីក/បង្រួមរូបភាព -->
                         <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-slate-800 mb-3 cursor-pointer group" onclick="openZoomModal('${product.imagePath}', '${product.name.replace(/'/g, "\\'")}')">
-                            <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='photo_8_2026-10-22_18-07-47.jpg';" class="product-img w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                            <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='photo_10_2026-10-22_18-04-44.jpg';" class="product-img w-full h-full object-cover transition-transform duration-500" loading="lazy">
                             <div class="absolute bottom-2 right-2 bg-slate-950/80 text-white px-2 py-1 rounded-lg text-[10px] flex items-center gap-1">
                                 <i class="ph-bold ph-magnifying-glass-plus text-yellow-400"></i> ពង្រីក
                             </div>
@@ -311,23 +330,13 @@
                     </div>
 
                     <div class="mt-4 space-y-3">
-                        ${isJersey ? `
                         <div class="grid grid-cols-6 gap-1">
                             ${ADULT_SIZES.map(size => `
                                 <button type="button" onclick="selectSize(${product.id}, '${size}')" class="py-1 rounded text-xs font-bold border ${currentSize === size ? 'bg-yellow-500 text-slate-950 border-yellow-400' : 'bg-slate-950 text-slate-300 border-slate-800'}">
                                     ${size}
                                 </button>
                             `).join('')}
-                        </div>` : ''}
-
-                        ${isBoots ? `
-                        <div class="grid grid-cols-6 gap-1">
-                            ${BOOT_SIZES.map(size => `
-                                <button type="button" onclick="selectSize(${product.id}, '${size}')" class="py-1 rounded text-[11px] font-bold border ${currentSize === size ? 'bg-yellow-500 text-slate-950 border-yellow-400' : 'bg-slate-950 text-slate-300 border-slate-800'}">
-                                    ${size}
-                                </button>
-                            `).join('')}
-                        </div>` : ''}
+                        </div>
 
                         <div class="flex items-center justify-between gap-2">
                             <div class="flex items-center bg-slate-950 border border-slate-800 rounded-xl p-1">
@@ -349,10 +358,7 @@
 
         function addToCart(id) {
             const prod = products.find(p => p.id === id);
-            let sizeStr = 'Free Size';
-            if (prod.category === 'jersey') sizeStr = 'Size: ' + (selectedSizes[id] || 'L');
-            if (prod.category === 'boots') sizeStr = 'Size: ' + (selectedSizes[id] || '41');
-
+            const sizeStr = 'Size: ' + (selectedSizes[id] || 'L');
             const qty = selectedQtys[id] || 1;
             const key = `${id}_${sizeStr}`;
             
@@ -414,7 +420,7 @@
             const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
             
             let text = `សួស្តីហាង អាណាចក្រកីឡា! ខ្ញុំចង់កម្ម៉ង់ទំនិញ៖\n` +
-                cart.map((i, idx) => `${idx+1}. ${i.code} - ${i.name} (${i.sizeStr}) | ${i.qty}ដំ/ឈុត ($${i.price * i.qty})`).join('\n') +
+                cart.map((i, idx) => `${idx+1}. ${i.code} - ${i.name} (${i.sizeStr}) | ${i.qty}ឈុត ($${i.price * i.qty})`).join('\n') +
                 `\n\n💰 សរុប: $${total.toFixed(2)}\n📞 លេខទូរស័ព្ទ: ${phone}\n📍 ទីតាំង: ${location}`;
 
             window.open(`https://t.me/anachakkeylasport?text=${encodeURIComponent(text)}`, '_blank');
@@ -427,7 +433,7 @@
             setTimeout(() => t.classList.add('translate-y-24', 'opacity-0'), 3000);
         }
 
-        window.onload = () => filterCategory('jersey');
+        window.onload = renderProducts;
     </script>
 </body>
 </html>
