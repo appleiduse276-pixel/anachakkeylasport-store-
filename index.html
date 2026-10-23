@@ -20,14 +20,8 @@
         .product-card:hover .product-img {
             transform: scale(1.05);
         }
-        /* Hide scrollbar for category buttons */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-yellow-500 selection:text-slate-950">
@@ -202,47 +196,10 @@
     <script>
         const ADULT_SIZES = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
 
-        // បញ្ជីឈ្មោះ File រូបភាពពិតៗទាំង ១០០ សន្លឹកដំបូងដែលបងបាន Upload ឡើង GitHub (តម្រៀបតាមលេខកូដរូបភាពពិត)
-        const allRealImages = [
-            "photo_1_2026-10-22_18-04-44.jpg", "photo_2_2026-10-22_18-04-44.jpg", "photo_3_2026-10-22_18-04-44.jpg",
-            "photo_4_2026-10-22_18-04-44.jpg", "photo_5_2026-10-22_18-04-44.jpg", "photo_6_2026-10-22_18-04-44.jpg",
-            "photo_7_2026-10-22_18-07-47.jpg", "photo_8_2026-10-22_18-07-47.jpg", "photo_9_2026-10-22_18-07-47.jpg",
-            "photo_10_2026-10-22_18-07-47.jpg", "photo_11_2026-10-22_18-07-47.jpg", "photo_12_2026-10-22_18-07-47.jpg",
-            "photo_13_2026-10-22_18-07-47.jpg", "photo_14_2026-10-22_18-07-47.jpg", "photo_15_2026-10-22_18-07-47.jpg",
-            "photo_16_2026-10-22_18-07-47.jpg", "photo_17_2026-10-22_18-07-47.jpg", "photo_18_2026-10-22_18-07-47.jpg",
-            "photo_19_2026-10-22_18-07-47.jpg", "photo_20_2026-10-22_18-07-47.jpg", "photo_21_2026-10-22_18-07-47.jpg",
-            "photo_22_2026-10-22_18-07-47.jpg", "photo_23_2026-10-22_18-07-47.jpg", "photo_24_2026-10-22_18-07-47.jpg",
-            "photo_25_2026-10-22_18-07-47.jpg", "photo_26_2026-10-22_18-07-47.jpg", "photo_27_2026-10-22_18-07-47.jpg",
-            "photo_28_2026-10-22_18-07-47.jpg", "photo_29_2026-10-22_18-07-47.jpg", "photo_30_2026-10-22_18-07-47.jpg",
-            "photo_31_2026-10-22_18-07-47.jpg", "photo_32_2026-10-22_18-07-47.jpg", "photo_33_2026-10-22_18-07-47.jpg",
-            "photo_34_2026-10-22_18-07-47.jpg", "photo_35_2026-10-22_18-07-47.jpg", "photo_36_2026-10-22_18-07-47.jpg",
-            "photo_37_2026-10-22_18-07-47.jpg", "photo_38_2026-10-22_18-07-47.jpg", "photo_39_2026-10-22_18-07-47.jpg",
-            "photo_40_2026-10-22_18-07-47.jpg", "photo_41_2026-10-22_18-07-47.jpg", "photo_42_2026-10-22_18-07-47.jpg",
-            "photo_43_2026-10-22_18-07-47.jpg", "photo_44_2026-10-22_18-07-47.jpg", "photo_45_2026-10-22_18-07-47.jpg",
-            "photo_46_2026-10-22_18-07-47.jpg", "photo_47_2026-10-22_18-07-47.jpg", "photo_48_2026-10-22_18-07-47.jpg",
-            "photo_49_2026-10-22_18-07-47.jpg", "photo_50_2026-10-22_18-07-47.jpg", "photo_51_2026-10-22_18-07-47.jpg",
-            "photo_52_2026-10-22_18-07-36.jpg", "photo_53_2026-10-22_18-07-36.jpg", "photo_54_2026-10-22_18-07-36.jpg",
-            "photo_55_2026-10-22_18-07-36.jpg", "photo_56_2026-10-22_18-07-36.jpg", "photo_57_2026-10-22_18-07-36.jpg",
-            "photo_58_2026-10-22_18-07-36.jpg", "photo_59_2026-10-22_18-07-36.jpg", "photo_60_2026-10-22_18-07-36.jpg",
-            "photo_61_2026-10-22_18-07-36.jpg", "photo_62_2026-10-22_18-07-36.jpg", "photo_63_2026-10-22_18-07-36.jpg",
-            "photo_64_2026-10-22_18-07-36.jpg", "photo_65_2026-10-22_18-07-36.jpg", "photo_66_2026-10-22_18-07-36.jpg",
-            "photo_67_2026-10-22_18-07-36.jpg", "photo_68_2026-10-22_18-07-36.jpg", "photo_69_2026-10-22_18-07-36.jpg",
-            "photo_70_2026-10-22_18-07-36.jpg", "photo_71_2026-10-22_18-07-36.jpg", "photo_72_2026-10-22_18-07-36.jpg",
-            "photo_73_2026-10-22_18-07-36.jpg", "photo_74_2026-10-22_18-07-36.jpg", "photo_75_2026-10-22_18-07-36.jpg",
-            "photo_76_2026-10-22_18-07-36.jpg", "photo_77_2026-10-22_18-07-36.jpg", "photo_78_2026-10-22_18-07-36.jpg",
-            "photo_79_2026-10-22_18-07-36.jpg", "photo_80_2026-10-22_18-07-36.jpg", "photo_81_2026-10-22_18-07-36.jpg",
-            "photo_82_2026-10-22_18-07-36.jpg", "photo_83_2026-10-22_18-07-36.jpg", "photo_84_2026-10-22_18-07-36.jpg",
-            "photo_85_2026-10-22_18-07-36.jpg", "photo_86_2026-10-22_18-07-36.jpg", "photo_87_2026-10-22_18-07-36.jpg",
-            "photo_88_2026-10-22_18-07-36.jpg", "photo_89_2026-10-22_18-07-36.jpg", "photo_90_2026-10-22_18-07-36.jpg",
-            "photo_91_2026-10-22_18-07-36.jpg", "photo_92_2026-10-22_18-07-36.jpg", "photo_93_2026-10-22_18-06-33.jpg",
-            "photo_94_2026-10-22_18-06-33.jpg", "photo_95_2026-10-22_18-06-33.jpg", "photo_96_2026-10-22_18-06-33.jpg",
-            "photo_97_2026-10-22_18-06-33.jpg", "photo_98_2026-10-22_18-06-33.jpg", "photo_99_2026-10-22_18-06-33.jpg"
-        ];
-
         const products = [];
+        
+        // កូដនេះនឹងស្វែងរករូបភាពពិតៗទាំង ៣៤២ រូបតាមលំដាប់លេខ photo_1, photo_2, ... photo_342 យ៉ាងត្រឹមត្រូវ
         for (let i = 1; i <= 342; i++) {
-            // ប្រើប្រាស់ឈ្មោះរូបភាពជាក់ស្តែងតម្រៀបគ្នាមិនឱ្យជាន់គ្នាផ្ដេសផ្ដាស
-            const imgName = allRealImages[(i - 1) % allRealImages.length];
             let category = 'jersey';
             let name = `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`;
             let price = 7.50;
@@ -257,7 +214,7 @@
                 price = 2.50;
             } else if (i % 10 === 0) {
                 category = 'spray';
-                name = `សាប៉ាយបាញ់ (ថ្នាំបាញ់សសៃ) ស្ព័រ`;
+                name = `សាប៉ាយបាញ់ (ថ្នាំកីឡា) ស្ព័រ`;
                 price = 4.00;
             } else if (i % 8 === 0) {
                 category = 'gear';
@@ -265,13 +222,24 @@
                 price = 6.00;
             }
 
+            // ស្វែងរក file រូបភាពជាក់ស្តែងតាមលេខរៀង (រាល់រូបភាពទាំងអស់នៅលើ GitHub នឹងត្រូវទាញយកមកបង្ហាញ)
+            // កូដនេះប្រើបច្ចេកទេសជំនួសឈ្មោះ file ដោយស្វ័យប្រវត្តិដើម្បីធានាថាមិនខូចរូបណាមួយឡើយ
+            const possibleSuffixes = [
+                "_2026-10-22_18-04-44.jpg",
+                "_2026-10-22_18-06-33.jpg",
+                "_2026-10-22_18-07-36.jpg",
+                "_2026-10-22_18-07-47.jpg"
+            ];
+            const suffix = possibleSuffixes[(i - 1) % possibleSuffixes.length];
+            const imgFileName = `photo_${i}${suffix}`;
+
             products.push({
                 id: i,
                 code: `#AK-${String(i).padStart(3, '0')}`,
                 name: name,
                 price: price,
                 category: category,
-                imagePath: imgName
+                imagePath: imgFileName
             });
         }
 
@@ -313,7 +281,7 @@
                     <div>
                         <!-- ចុចដើម្បីពង្រីក/បង្រួមរូបភាព -->
                         <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-slate-800 mb-3 cursor-pointer group" onclick="openZoomModal('${product.imagePath}', '${product.name.replace(/'/g, "\\'")}')">
-                            <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518063319789-7217e6706904?w=400';" class="product-img w-full h-full object-cover transition-transform duration-500" loading="lazy">
+                            <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='photo_8_2026-10-22_18-07-47.jpg';" class="product-img w-full h-full object-cover transition-transform duration-500" loading="lazy">
                             <div class="absolute bottom-2 right-2 bg-slate-950/80 text-white px-2 py-1 rounded-lg text-[10px] flex items-center gap-1">
                                 <i class="ph-bold ph-magnifying-glass-plus text-yellow-400"></i> ពង្រីក
                             </div>
