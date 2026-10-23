@@ -49,10 +49,10 @@
 
             <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
                 <a href="#home" class="text-yellow-400 font-semibold">ទំព័រដើម</a>
-                <a href="#products" class="hover:text-yellow-400 transition-colors">ទំនិញទាំងអស់</a>
+                <a href="#products" class="hover:text-yellow-400 transition-colors">ផលិតផលទាំងអស់</a>
                 <button onclick="openSizeChartModal()" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
                     <i class="ph-bold ph-ruler text-yellow-500"></i>
-                    <span>តារាងទំហំអាវ</span>
+                    <span>តារាងទំហំ</span>
                 </button>
                 <a href="https://t.me/anachakkeylasport" target="_blank" class="hover:text-yellow-400 transition-colors flex items-center gap-1.5">
                     <i class="ph-fill ph-telegram-logo text-sky-400"></i>
@@ -84,7 +84,7 @@
                     ស្វាគមន៍មកកាន់ <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
                 </h2>
                 <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                    ទីតាំងលក់ឈុតកីឡា (តម្លៃ 7.50$) ស្បែកជើងបាល់ទាត់ ស្រោមជើង សាប៉ាយបាញ់ និងសម្ភារៈកីឡាជាច្រើនមុខទៀត។
+                    ជ្រើសរើសប្រភេទផលិតផលតាមតម្រូវការ៖ ឈុតកីឡា, ស្បែកជើងបាល់ទាត់, ស្រោមជើង, សាប៉ាយបាញ់ និងសម្ភារៈកីឡាជាច្រើនទៀត។
                 </p>
             </div>
         </div>
@@ -92,14 +92,21 @@
 
     <!-- Main Products Catalog -->
     <main id="products" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full">
-        <!-- Category Filter Buttons -->
-        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-6 no-scrollbar">
-            <button onclick="filterCategory('all')" id="cat-btn-all" class="category-btn bg-yellow-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all">ទំនិញទាំងអស់</button>
-            <button onclick="filterCategory('jersey')" id="cat-btn-jersey" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">ឈុតកីឡា ($7.50)</button>
-            <button onclick="filterCategory('boots')" id="cat-btn-boots" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">ស្បែកជើងបាល់ទាត់</button>
-            <button onclick="filterCategory('socks')" id="cat-btn-socks" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">ស្រោមជើង</button>
-            <button onclick="filterCategory('spray')" id="cat-btn-spray" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">សាប៉ាយបាញ់ (ថ្នាំកីឡា)</button>
-            <button onclick="filterCategory('gear')" id="cat-btn-gear" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800">សម្ភារៈផ្សេងៗ</button>
+        <!-- Category Zones (Tabs) -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar border-b border-slate-800">
+            <button onclick="filterCategory('jersey')" id="cat-btn-jersey" class="category-btn bg-yellow-500 text-slate-950 font-extrabold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all shadow-md">👕 ឈុតកីឡា ($7.50)</button>
+            <button onclick="filterCategory('boots')" id="cat-btn-boots" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">👟 ស្បែកជើងបាល់ទាត់</button>
+            <button onclick="filterCategory('socks')" id="cat-btn-socks" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">🧦 ស្រោមជើងកីឡា</button>
+            <button onclick="filterCategory('spray')" id="cat-btn-spray" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">🧴 សាប៉ាយបាញ់ (ថ្នាំកីឡា)</button>
+            <button onclick="filterCategory('gear')" id="cat-btn-gear" class="category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800">🎒 សម្ភារៈផ្សេងៗ</button>
+        </div>
+
+        <!-- Section Title for Current Zone -->
+        <div class="mb-6 flex items-center justify-between">
+            <h3 id="zone-title" class="text-xl md:text-2xl font-extrabold text-white flex items-center gap-2.5">
+                <i class="ph-fill ph-t-shirt text-yellow-500"></i>
+                <span id="zone-title-text">ឈុតកីឡាទាំងអស់</span>
+            </h3>
         </div>
 
         <!-- Product Grid -->
@@ -195,35 +202,35 @@
 
     <script>
         const ADULT_SIZES = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
+        const BOOT_SIZES = ['39', '40', '41', '42', '43', '44'];
 
         const products = [];
         
-        // កូដនេះនឹងស្វែងរករូបភាពពិតៗទាំង ៣៤២ រូបតាមលំដាប់លេខ photo_1, photo_2, ... photo_342 យ៉ាងត្រឹមត្រូវ
+        // បង្កើតផលិតផលទាំង ៣៤២ រូប និងបែងចែក Zone យ៉ាងច្បាស់លាស់
         for (let i = 1; i <= 342; i++) {
             let category = 'jersey';
             let name = `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`;
             let price = 7.50;
 
-            if (i % 25 === 0) {
+            // ចែកប្រភេទផលិតផលតាមលំដាប់រៀង
+            if (i % 5 === 0) {
                 category = 'boots';
                 name = `ស្បែកជើងបាល់ទាត់ Pro ម៉ូដទី ${i}`;
-                price = 25.00;
-            } else if (i % 15 === 0) {
+                price = 28.00;
+            } else if (i % 4 === 0) {
                 category = 'socks';
                 name = `ស្រោមជើងកីឡាការពារជើង ម៉ូដ ${i}`;
                 price = 2.50;
-            } else if (i % 10 === 0) {
+            } else if (i % 3 === 0) {
                 category = 'spray';
                 name = `សាប៉ាយបាញ់ (ថ្នាំកីឡា) ស្ព័រ`;
                 price = 4.00;
-            } else if (i % 8 === 0) {
+            } else if (i % 2 === 0 && i % 5 !== 0) {
                 category = 'gear';
-                name = `សម្ភារៈការពារ និងកាតាបកីឡា`;
+                name = `សម្ភារៈការពារ និងកាតាបកីឡា ម៉ូដ ${i}`;
                 price = 6.00;
             }
 
-            // ស្វែងរក file រូបភាពជាក់ស្តែងតាមលេខរៀង (រាល់រូបភាពទាំងអស់នៅលើ GitHub នឹងត្រូវទាញយកមកបង្ហាញ)
-            // កូដនេះប្រើបច្ចេកទេសជំនួសឈ្មោះ file ដោយស្វ័យប្រវត្តិដើម្បីធានាថាមិនខូចរូបណាមួយឡើយ
             const possibleSuffixes = [
                 "_2026-10-22_18-04-44.jpg",
                 "_2026-10-22_18-06-33.jpg",
@@ -243,7 +250,7 @@
             });
         }
 
-        let currentCategory = 'all';
+        let currentCategory = 'jersey'; // ចាប់ផ្តើមដំបូងបង្ហាញ Zone ឈុតកីឡា
         let cart = [];
         let selectedSizes = {};
         let selectedQtys = {};
@@ -251,30 +258,39 @@
         function filterCategory(cat) {
             currentCategory = cat;
             document.querySelectorAll('.category-btn').forEach(btn => {
-                btn.className = "category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all border border-slate-800";
+                btn.className = "category-btn bg-slate-900 text-slate-300 hover:bg-slate-800 font-bold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all border border-slate-800";
             });
-            let activeBtnId = 'cat-btn-all';
-            if (cat === 'jersey') activeBtnId = 'cat-btn-jersey';
-            if (cat === 'boots') activeBtnId = 'cat-btn-boots';
-            if (cat === 'socks') activeBtnId = 'cat-btn-socks';
-            if (cat === 'spray') activeBtnId = 'cat-btn-spray';
-            if (cat === 'gear') activeBtnId = 'cat-btn-gear';
+            
+            let activeBtnId = 'cat-btn-jersey';
+            let titleText = 'ឈុតកីឡាទាំងអស់';
+            let iconClass = 'ph-fill ph-t-shirt text-yellow-500';
+
+            if (cat === 'jersey') { activeBtnId = 'cat-btn-jersey'; titleText = 'ឈុតកីឡាទាំងអស់ ($7.50)'; iconClass = 'ph-fill ph-t-shirt text-yellow-500'; }
+            if (cat === 'boots') { activeBtnId = 'cat-btn-boots'; titleText = 'ស្បែកជើងបាល់ទាត់ Pro'; iconClass = 'ph-fill ph-sneaker text-yellow-500'; }
+            if (cat === 'socks') { activeBtnId = 'cat-btn-socks'; titleText = 'ស្រោមជើងកីឡា'; iconClass = 'ph-fill ph-soccer-ball text-yellow-500'; }
+            if (cat === 'spray') { activeBtnId = 'cat-btn-spray'; titleText = 'សាប៉ាយបាញ់ (ថ្នាំកីឡា)'; iconClass = 'ph-fill ph-first-aid text-yellow-500'; }
+            if (cat === 'gear') { activeBtnId = 'cat-btn-gear'; titleText = 'សម្ភារៈកីឡាផ្សេងៗ'; iconClass = 'ph-fill ph-backpack text-yellow-500'; }
 
             const activeBtn = document.getElementById(activeBtnId);
             if (activeBtn) {
-                activeBtn.className = "category-btn bg-yellow-500 text-slate-950 font-bold px-4 py-2 rounded-xl text-xs whitespace-nowrap transition-all";
+                activeBtn.className = "category-btn bg-yellow-500 text-slate-950 font-extrabold px-5 py-2.5 rounded-2xl text-xs md:text-sm whitespace-nowrap transition-all shadow-md";
             }
+
+            document.getElementById('zone-title-text').textContent = titleText;
+            document.getElementById('zone-title').innerHTML = `<i class="${iconClass}"></i> <span id="zone-title-text">${titleText}</span>`;
+
             renderProducts();
         }
 
         function renderProducts() {
             const grid = document.getElementById('product-grid');
-            const filtered = currentCategory === 'all' ? products : products.filter(p => p.category === currentCategory);
+            const filtered = products.filter(p => p.category === currentCategory);
 
             grid.innerHTML = filtered.map(product => {
-                const currentSize = selectedSizes[product.id] || 'L';
+                const currentSize = selectedSizes[product.id] || (product.category === 'boots' ? '41' : 'L');
                 const currentQty = selectedQtys[product.id] || 1;
                 const isJersey = product.category === 'jersey';
+                const isBoots = product.category === 'boots';
 
                 return `
                 <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-4 flex flex-col justify-between shadow-xl">
@@ -304,6 +320,15 @@
                             `).join('')}
                         </div>` : ''}
 
+                        ${isBoots ? `
+                        <div class="grid grid-cols-6 gap-1">
+                            ${BOOT_SIZES.map(size => `
+                                <button type="button" onclick="selectSize(${product.id}, '${size}')" class="py-1 rounded text-[11px] font-bold border ${currentSize === size ? 'bg-yellow-500 text-slate-950 border-yellow-400' : 'bg-slate-950 text-slate-300 border-slate-800'}">
+                                    ${size}
+                                </button>
+                            `).join('')}
+                        </div>` : ''}
+
                         <div class="flex items-center justify-between gap-2">
                             <div class="flex items-center bg-slate-950 border border-slate-800 rounded-xl p-1">
                                 <button onclick="changeQty(${product.id}, -1)" class="w-7 h-7 text-white font-bold">-</button>
@@ -324,13 +349,16 @@
 
         function addToCart(id) {
             const prod = products.find(p => p.id === id);
-            const size = (prod.category === 'jersey') ? (selectedSizes[id] || 'L') : 'Free Size';
+            let sizeStr = 'Free Size';
+            if (prod.category === 'jersey') sizeStr = 'Size: ' + (selectedSizes[id] || 'L');
+            if (prod.category === 'boots') sizeStr = 'Size: ' + (selectedSizes[id] || '41');
+
             const qty = selectedQtys[id] || 1;
-            const key = `${id}_${size}`;
+            const key = `${id}_${sizeStr}`;
             
             const existing = cart.find(i => i.key === key);
             if (existing) existing.qty += qty;
-            else cart.push({ key, id, code: prod.code, name: prod.name, price: prod.price, size, qty, imagePath: prod.imagePath });
+            else cart.push({ key, id, code: prod.code, name: prod.name, price: prod.price, sizeStr, qty, imagePath: prod.imagePath });
 
             selectedQtys[id] = 1;
             updateCartUI();
@@ -353,7 +381,8 @@
                 <div class="flex items-center gap-3 bg-slate-950 p-3 rounded-xl border border-slate-800">
                     <img src="${i.imagePath}" class="w-12 h-12 object-cover rounded-lg">
                     <div class="flex-grow">
-                        <h4 class="text-xs font-bold text-white">${i.code} - ${i.size !== 'Free Size' ? 'Size: '+i.size : i.name}</h4>
+                        <h4 class="text-xs font-bold text-white">${i.code} - ${i.name}</h4>
+                        <p class="text-xs text-slate-400">${i.sizeStr}</p>
                         <p class="text-xs text-yellow-400">$${i.price} x ${i.qty} = $${(i.price * i.qty).toFixed(2)}</p>
                     </div>
                     <button onclick="removeFromCart('${i.key}')" class="text-red-400"><i class="ph-bold ph-trash"></i></button>
@@ -385,7 +414,7 @@
             const total = cart.reduce((s, i) => s + (i.price * i.qty), 0);
             
             let text = `សួស្តីហាង អាណាចក្រកីឡា! ខ្ញុំចង់កម្ម៉ង់ទំនិញ៖\n` +
-                cart.map((i, idx) => `${idx+1}. ${i.code} - ${i.name} ${i.size !== 'Free Size' ? '(Size: '+i.size+')' : ''} | ${i.qty}ដំ/ឈុត ($${i.price * i.qty})`).join('\n') +
+                cart.map((i, idx) => `${idx+1}. ${i.code} - ${i.name} (${i.sizeStr}) | ${i.qty}ដំ/ឈុត ($${i.price * i.qty})`).join('\n') +
                 `\n\n💰 សរុប: $${total.toFixed(2)}\n📞 លេខទូរស័ព្ទ: ${phone}\n📍 ទីតាំង: ${location}`;
 
             window.open(`https://t.me/anachakkeylasport?text=${encodeURIComponent(text)}`, '_blank');
@@ -398,7 +427,7 @@
             setTimeout(() => t.classList.add('translate-y-24', 'opacity-0'), 3000);
         }
 
-        window.onload = renderProducts;
+        window.onload = () => filterCategory('jersey');
     </script>
 </body>
 </html>
