@@ -20,6 +20,14 @@
         .product-card:hover .product-img {
             transform: scale(1.05);
         }
+        /* Hide scrollbar for category buttons */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col selection:bg-yellow-500 selection:text-slate-950">
@@ -82,7 +90,7 @@
                     ស្វាគមន៍មកកាន់ <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
                 </h2>
                 <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                    ទីតាំងលក់ឈុតកីឡា (តម្លៃចាប់ពី 7.50$) ស្បែកជើងបាល់ទាត់ ស្រោមជើង សាប៉ាយបាញ់ និងសម្ភារៈកីឡាជាច្រើនមុខទៀត។
+                    ទីតាំងលក់ឈុតកីឡា (តម្លៃ 7.50$) ស្បែកជើងបាល់ទាត់ ស្រោមជើង សាប៉ាយបាញ់ និងសម្ភារៈកីឡាជាច្រើនមុខទៀត។
                 </p>
             </div>
         </div>
@@ -194,8 +202,10 @@
     <script>
         const ADULT_SIZES = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
 
-        const products = [];
-        const exactImageFiles = [
+        // បញ្ជីឈ្មោះ File រូបភាពពិតៗទាំង ១០០ សន្លឹកដំបូងដែលបងបាន Upload ឡើង GitHub (តម្រៀបតាមលេខកូដរូបភាពពិត)
+        const allRealImages = [
+            "photo_1_2026-10-22_18-04-44.jpg", "photo_2_2026-10-22_18-04-44.jpg", "photo_3_2026-10-22_18-04-44.jpg",
+            "photo_4_2026-10-22_18-04-44.jpg", "photo_5_2026-10-22_18-04-44.jpg", "photo_6_2026-10-22_18-04-44.jpg",
             "photo_7_2026-10-22_18-07-47.jpg", "photo_8_2026-10-22_18-07-47.jpg", "photo_9_2026-10-22_18-07-47.jpg",
             "photo_10_2026-10-22_18-07-47.jpg", "photo_11_2026-10-22_18-07-47.jpg", "photo_12_2026-10-22_18-07-47.jpg",
             "photo_13_2026-10-22_18-07-47.jpg", "photo_14_2026-10-22_18-07-47.jpg", "photo_15_2026-10-22_18-07-47.jpg",
@@ -229,21 +239,21 @@
             "photo_97_2026-10-22_18-06-33.jpg", "photo_98_2026-10-22_18-06-33.jpg", "photo_99_2026-10-22_18-06-33.jpg"
         ];
 
-        // បង្កើតបញ្ជីផលិតផល (រួមបញ្ចូលទាំងឈុតកីឡា និងសម្ភារៈកីឡាផ្សេងៗ)
+        const products = [];
         for (let i = 1; i <= 342; i++) {
-            const fileName = exactImageFiles[(i - 1) % exactImageFiles.length];
+            // ប្រើប្រាស់ឈ្មោះរូបភាពជាក់ស្តែងតម្រៀបគ្នាមិនឱ្យជាន់គ្នាផ្ដេសផ្ដាស
+            const imgName = allRealImages[(i - 1) % allRealImages.length];
             let category = 'jersey';
             let name = `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`;
             let price = 7.50;
 
-            // ចែកប្រភេទជាសម្ភារៈកីឡាផ្សេងៗសម្រាប់ទំនិញមួយចំនួន
             if (i % 25 === 0) {
                 category = 'boots';
                 name = `ស្បែកជើងបាល់ទាត់ Pro ម៉ូដទី ${i}`;
                 price = 25.00;
             } else if (i % 15 === 0) {
                 category = 'socks';
-                name = `ស្រោមជើងកីឡាប្រដាប់ការពារ ម៉ូដ ${i}`;
+                name = `ស្រោមជើងកីឡាការពារជើង ម៉ូដ ${i}`;
                 price = 2.50;
             } else if (i % 10 === 0) {
                 category = 'spray';
@@ -251,8 +261,8 @@
                 price = 4.00;
             } else if (i % 8 === 0) {
                 category = 'gear';
-                name = `ខ្នាតការពារជង្គង់/កែងដៃ កីឡា`;
-                price = 5.00;
+                name = `សម្ភារៈការពារ និងកាតាបកីឡា`;
+                price = 6.00;
             }
 
             products.push({
@@ -261,7 +271,7 @@
                 name: name,
                 price: price,
                 category: category,
-                imagePath: fileName
+                imagePath: imgName
             });
         }
 
@@ -301,7 +311,7 @@
                 return `
                 <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-4 flex flex-col justify-between shadow-xl">
                     <div>
-                        <!-- រូបភាពចុចពង្រីក (Zoom) -->
+                        <!-- ចុចដើម្បីពង្រីក/បង្រួមរូបភាព -->
                         <div class="relative w-full h-56 rounded-2xl overflow-hidden bg-slate-800 mb-3 cursor-pointer group" onclick="openZoomModal('${product.imagePath}', '${product.name.replace(/'/g, "\\'")}')">
                             <img src="${product.imagePath}" alt="${product.name}" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518063319789-7217e6706904?w=400';" class="product-img w-full h-full object-cover transition-transform duration-500" loading="lazy">
                             <div class="absolute bottom-2 right-2 bg-slate-950/80 text-white px-2 py-1 rounded-lg text-[10px] flex items-center gap-1">
@@ -384,7 +394,6 @@
 
         function toggleCart() { document.getElementById('cart-drawer').classList.toggle('hidden'); }
         
-        // Image Zoom Modal Functions
         function openZoomModal(imgSrc, title) {
             document.getElementById('zoom-img').src = imgSrc;
             document.getElementById('zoom-title').textContent = title;
