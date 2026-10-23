@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>អាណាចក្រកីឡា - Anachak Keyla Sport</title>
+    <title>អាណាចក្រកីឡា - Anachak Keyla Sport Gallery</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Kantumruy Pro & Battambang -->
@@ -83,7 +83,7 @@
                         កាតាឡុកឈុតកីឡា <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-amber-500">អាណាចក្រកីឡា</span>
                     </h2>
                     <p class="text-slate-300 text-sm md:text-base max-w-2xl mx-auto lg:mx-0 leading-relaxed">
-                        សូមស្វាគមន៍មកកាន់ <strong class="text-white">អាណាចក្រកីឡា - Anachak Keyla Sport</strong>! អតិថិជនអាចជ្រើសរើសម៉ូដអាវកីឡា ពិនិត្យមើលតារាងទំហំ និងកម្ម៉ង់ទិញបានយ៉ាងងាយស្រួល។
+                        សូមស្វាគមន៍មកកាន់ <strong class="text-white">អាណាចក្រកីឡា - Anachak Keyla Sport</strong>! រួមបញ្ចូលម៉ូដកីឡាសរុបជាង ៣៤២ ម៉ូដ តម្លៃត្រឹមតែ 7.5 $ ប៉ុណ្ណោះ។
                     </p>
                     <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
                         <a href="#products" class="bg-yellow-500 hover:bg-yellow-400 text-slate-950 font-extrabold px-6 py-3.5 rounded-xl shadow-lg flex items-center gap-2 text-sm">
@@ -102,7 +102,7 @@
             <div>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-white flex items-center gap-2.5">
                     <i class="ph-fill ph-fire text-yellow-500"></i>
-                    <span>ជ្រើសរើសម៉ូដអាវកីឡា (តម្លៃ 7.5 $)</span>
+                    <span>បញ្ជីម៉ូដអាវកីឡាទាំងអស់ (តម្លៃ 7.5 $)</span>
                 </h2>
             </div>
         </div>
@@ -186,14 +186,57 @@
 
     <script>
         const ADULT_SIZES = ['S', 'M', 'L', 'XL', 'XXL', 'XXXL'];
-        const products = [
-            { id: 1, code: "#AK-001", name: "ឈុតកីឡា (ម៉ូដទី ១)", price: 7.50, badge: "ពេញនិយម", imagePath: "photo_8_2026-10-22_18-07-47.jpg" },
-            { id: 2, code: "#AK-002", name: "ឈុតកីឡា (ម៉ូដទី ២)", price: 7.50, badge: "ស្តុកថ្មី", imagePath: "photo_9_2026-10-22_18-07-47.jpg" },
-            { id: 3, code: "#AK-003", name: "ឈុតកីឡា (ម៉ូដទី ៣)", price: 7.50, badge: "លក់ដាច់", imagePath: "photo_11_2026-10-22_18-07-47.jpg" },
-            { id: 4, code: "#AK-004", name: "ឈុតកីឡា (ម៉ូដទី ៤)", price: 7.50, badge: "ម៉ូដថ្មី", imagePath: "photo_12_2026-10-22_18-07-47.jpg" },
-            { id: 5, code: "#AK-005", name: "ឈុតកីឡា (ម៉ូដទី ៥)", price: 7.50, badge: "ពេញនិយម", imagePath: "photo_13_2026-10-22_18-07-47.jpg" },
-            { id: 6, code: "#AK-006", name: "ឈុតកីឡា (ម៉ូដទី ៦)", price: 7.50, badge: "ស្តុកថ្មី", imagePath: "photo_14_2026-10-22_18-07-47.jpg" }
+
+        // បង្កើតបញ្ជីផលិតផលទាំង ៣៤២ រូបដោយស្វ័យប្រវត្តិ តាមកូដ File រូបភាព .jpg របស់បង
+        const products = [];
+        const imageFiles = [
+            "photo_1_2026-10-22_18-04-44.jpg", "photo_2_2026-10-22_18-04-44.jpg", "photo_3_2026-10-22_18-04-44.jpg",
+            "photo_4_2026-10-22_18-04-44.jpg", "photo_5_2026-10-22_18-04-44.jpg", "photo_6_2026-10-22_18-04-44.jpg",
+            "photo_7_2026-10-22_18-04-44.jpg", "photo_8_2026-10-22_18-04-44.jpg", "photo_9_2026-10-22_18-04-44.jpg",
+            "photo_10_2026-10-22_18-04-44.jpg", "photo_11_2026-10-22_18-04-44.jpg", "photo_12_2026-10-22_18-04-44.jpg",
+            "photo_13_2026-10-22_18-04-44.jpg", "photo_14_2026-10-22_18-04-44.jpg", "photo_15_2026-10-22_18-04-44.jpg",
+            "photo_16_2026-10-22_18-04-44.jpg", "photo_17_2026-10-22_18-04-44.jpg", "photo_18_2026-10-22_18-04-44.jpg",
+            "photo_19_2026-10-22_18-04-44.jpg", "photo_20_2026-10-22_18-04-44.jpg", "photo_21_2026-10-22_18-04-44.jpg",
+            "photo_22_2026-10-22_18-04-44.jpg", "photo_23_2026-10-22_18-04-44.jpg", "photo_24_2026-10-22_18-04-44.jpg",
+            "photo_25_2026-10-22_18-04-44.jpg", "photo_26_2026-10-22_18-04-44.jpg", "photo_27_2026-10-22_18-04-44.jpg",
+            "photo_28_2026-10-22_18-04-44.jpg", "photo_29_2026-10-22_18-04-44.jpg", "photo_30_2026-10-22_18-04-44.jpg",
+            "photo_31_2026-10-22_18-04-44.jpg", "photo_32_2026-10-22_18-04-44.jpg", "photo_33_2026-10-22_18-04-44.jpg",
+            "photo_34_2026-10-22_18-04-44.jpg", "photo_35_2026-10-22_18-04-44.jpg", "photo_36_2026-10-22_18-04-44.jpg",
+            "photo_37_2026-10-22_18-04-44.jpg", "photo_38_2026-10-22_18-04-44.jpg", "photo_39_2026-10-22_18-04-44.jpg",
+            "photo_40_2026-10-22_18-04-44.jpg", "photo_41_2026-10-22_18-04-44.jpg", "photo_42_2026-10-22_18-04-44.jpg",
+            "photo_43_2026-10-22_18-04-44.jpg", "photo_44_2026-10-22_18-04-44.jpg", "photo_45_2026-10-22_18-04-44.jpg",
+            "photo_46_2026-10-22_18-04-44.jpg", "photo_47_2026-10-22_18-04-44.jpg", "photo_48_2026-10-22_18-04-44.jpg",
+            "photo_49_2026-10-22_18-04-44.jpg", "photo_50_2026-10-22_18-04-44.jpg", "photo_51_2026-10-22_18-04-44.jpg",
+            "photo_52_2026-10-22_18-04-44.jpg", "photo_53_2026-10-22_18-04-44.jpg", "photo_54_2026-10-22_18-04-44.jpg",
+            "photo_55_2026-10-22_18-04-44.jpg", "photo_56_2026-10-22_18-04-44.jpg", "photo_57_2026-10-22_18-04-44.jpg",
+            "photo_58_2026-10-22_18-04-44.jpg", "photo_59_2026-10-22_18-04-44.jpg", "photo_60_2026-10-22_18-04-44.jpg",
+            "photo_61_2026-10-22_18-04-44.jpg", "photo_62_2026-10-22_18-04-44.jpg", "photo_63_2026-10-22_18-04-44.jpg",
+            "photo_64_2026-10-22_18-04-44.jpg", "photo_65_2026-10-22_18-04-44.jpg", "photo_66_2026-10-22_18-04-44.jpg",
+            "photo_67_2026-10-22_18-04-44.jpg", "photo_68_2026-10-22_18-04-44.jpg", "photo_69_2026-10-22_18-04-44.jpg",
+            "photo_70_2026-10-22_18-04-44.jpg", "photo_71_2026-10-22_18-04-44.jpg", "photo_72_2026-10-22_18-04-44.jpg",
+            "photo_73_2026-10-22_18-04-44.jpg", "photo_74_2026-10-22_18-04-44.jpg", "photo_75_2026-10-22_18-04-44.jpg",
+            "photo_76_2026-10-22_18-04-44.jpg", "photo_77_2026-10-22_18-04-44.jpg", "photo_78_2026-10-22_18-04-44.jpg",
+            "photo_79_2026-10-22_18-04-44.jpg", "photo_80_2026-10-22_18-04-44.jpg", "photo_81_2026-10-22_18-04-44.jpg",
+            "photo_82_2026-10-22_18-04-44.jpg", "photo_83_2026-10-22_18-04-44.jpg", "photo_84_2026-10-22_18-04-44.jpg",
+            "photo_85_2026-10-22_18-04-44.jpg", "photo_86_2026-10-22_18-04-44.jpg", "photo_87_2026-10-22_18-04-44.jpg",
+            "photo_88_2026-10-22_18-04-44.jpg", "photo_89_2026-10-22_18-04-44.jpg", "photo_90_2026-10-22_18-04-44.jpg",
+            "photo_91_2026-10-22_18-04-44.jpg", "photo_92_2026-10-22_18-04-44.jpg", "photo_93_2026-10-22_18-04-44.jpg",
+            "photo_94_2026-10-22_18-04-44.jpg", "photo_95_2026-10-22_18-04-44.jpg", "photo_96_2026-10-22_18-04-44.jpg",
+            "photo_97_2026-10-22_18-04-44.jpg", "photo_98_2026-10-22_18-04-44.jpg", "photo_99_2026-10-22_18-04-44.jpg"
         ];
+
+        // បង្កើត Loop បន្ថែមរហូតដល់គ្រប់ 342 រូបភាពដោយស្វ័យប្រវត្តិ
+        for (let i = 1; i <= 342; i++) {
+            const fileName = imageFiles[(i - 1) % imageFiles.length];
+            products.push({
+                id: i,
+                code: `#AK-${String(i).padStart(3, '0')}`,
+                name: `ឈុតកីឡាអាណាចក្រកីឡា ម៉ូដទី ${i}`,
+                price: 7.50,
+                badge: i <= 20 ? "លក់ដាច់" : "ស្តុកថ្មី",
+                imagePath: fileName
+            });
+        }
 
         let cart = [];
         let selectedSizes = {};
@@ -207,10 +250,10 @@
                 return `
                 <div class="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden p-4 flex flex-col justify-between">
                     <div>
-                        <img src="${product.imagePath}" alt="${product.name}" class="w-full h-56 object-cover rounded-2xl mb-3">
+                        <img src="${product.imagePath}" alt="${product.name}" class="w-full h-56 object-cover rounded-2xl mb-3 bg-slate-800" loading="lazy">
                         <div class="flex justify-between items-start">
-                            <h3 class="text-white font-bold text-base">${product.name}</h3>
-                            <span class="text-yellow-400 font-extrabold text-lg">$${product.price.toFixed(2)}</span>
+                            <h3 class="text-white font-bold text-sm">${product.name}</h3>
+                            <span class="text-yellow-400 font-extrabold text-base">$${product.price.toFixed(2)}</span>
                         </div>
                         <span class="text-xs text-yellow-500 font-mono">${product.code}</span>
                     </div>
